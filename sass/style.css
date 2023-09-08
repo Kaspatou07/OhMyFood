@@ -6,6 +6,12 @@
   --lightgreen-color: #99E2D0;
   --darkergreen-color: #008766;
   --background-color: #F6F6F6;
+  --gradient-color: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+  --footer-color: #353535;
+}
+
+* {
+  font-family: "Roboto";
 }
 
 h1 {
@@ -23,13 +29,15 @@ h1 {
 
 p {
   /* Pour les textes */
-  font-family: "Roboto";
   color: #353535;
 }
 
 .section-title {
-  font-family: "Roboto";
   font-size: 24px;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -42,133 +50,246 @@ body {
 .main-container {
   width: 100%;
   box-sizing: border-box;
+  /* Firefox compatibilité */
+  /* SOurce : https://stackoverflow.com/questions/19621306/css-placeholder-text-color-on-firefox */
+  /* Bouton Explorer */
+  /* Fonctionnement */
 }
-
-.localisation-bar {
+.main-container .localisation-bar {
   background-color: #EAEAEA;
   display: flex;
   flex-direction: row;
   justify-content: center;
   height: 50px;
 }
-
-.localisation-bar i {
+.main-container .localisation-bar i {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #353535;
 }
-
-.localisation-bar input {
+.main-container .localisation-bar input {
   border-width: 0px;
 }
-
-input::-moz-placeholder {
+.main-container input::-moz-placeholder {
   background-color: #EAEAEA;
   font-size: 16px;
   color: #353535;
   text-align: center;
 }
-
-input::placeholder {
+.main-container input::placeholder {
   background-color: #EAEAEA;
   font-size: 16px;
   color: #353535;
   text-align: center;
 }
-
-/* Firefox compatibilité */
-/* SOurce : https://stackoverflow.com/questions/19621306/css-placeholder-text-color-on-firefox */
-:-moz-placeholder {
+.main-container :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: black;
   opacity: 1;
 }
-
-::-moz-placeholder {
+.main-container ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: black;
   opacity: 1;
 }
-
-.Titreshadow {
+.main-container .Titreshadow {
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
 }
-
-/* Bouton Explorer */
-.explorer {
+.main-container .explorer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
 }
-
-.explorer h2 {
+.main-container .explorer h2 {
   text-align: center;
   margin-bottom: 0px;
   margin-top: 50px;
 }
-
-.explorer p {
+.main-container .explorer p {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
   line-height: 21px;
   margin-bottom: 30px;
 }
-
-.btn {
-  background: rgb(147, 86, 220);
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+.main-container .btn {
+  background: var(--gradient-color);
   text-align: center;
   border-radius: 25px;
   font-size: 16px;
+  cursor: pointer;
   color: white;
   height: 50px;
   width: 218px;
-  font-family: "Roboto";
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
   border: 0px;
 }
-
-/* Fonctionnement */
-.Fonctionnement {
+.main-container .btn:hover {
+  filter: brightness(115%);
+}
+.main-container main {
+  padding: 0px 20px 0px 20px;
+}
+.main-container .Fonctionnement {
   display: flex;
   flex-direction: column;
   background-color: white;
 }
-
-.Fonctionnement h2 {
+.main-container .Fonctionnement h2 {
   margin-left: 20px;
 }
-
-.fontion-list {
-  padding-left: 25px;
+.main-container .fontion-list {
   list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
 }
-
-.btn-list {
+.main-container ul {
+  padding-left: 10px;
+  margin-right: 20px;
+}
+.main-container li {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.main-container .nb-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  /* Utiliser un border-radius de 50% pour créer un cercle */
+  padding: 1px;
+  /* Espace à l'intérieur de la bordure */
+  height: 24px;
+  width: 24px;
+  position: relative;
+  left: 10px;
+}
+.main-container .btn-list {
   background-color: #f6f6f6;
   display: flex;
   align-items: center;
-  padding: 0px 0px 0px 15px;
   border-radius: 20px;
   border: 0px;
-  width: 323px;
+  width: 100%;
   height: 72px;
-  margin-bottom: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: 500;
 }
-
-.btn-list i {
-  margin-right: 20px;
-  margin-left: 20px;
+.main-container .btn-list i {
+  padding: 0px 25px 0px 25px;
+  color: #7e7e7e;
 }
-
-.Fonctionnement ul {
+.main-container .btn-list .fa-store {
+  color: var(--primary-color);
+}
+.main-container .Fonctionnement ul {
   list-style-type: none;
+}
+.main-container .card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+}
+.main-container .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-container .card-title {
+  font-size: 18px;
+}
+.main-container .Restaurants-cards {
+  flex-direction: column;
+  gap: 15px;
+}
+.main-container .Restaurants h2 {
+  margin-bottom: 10px;
+  padding-top: 30px;
+}
+.main-container .Restaurants-cards .card {
+  display: flex;
+  width: 100%;
+  height: 251px;
+  padding: 0px;
+}
+.main-container .Restaurants-cards img {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.main-container .Restaurants-cards .card-content {
+  width: 100%;
+  height: 30%;
+  box-sizing: border-box;
+}
+.main-container .card-txt {
+  margin-left: 15px;
+}
+.main-container .card-title {
+  margin-top: 12px;
+  margin-bottom: 0px;
+}
+.main-container .card-content {
+  width: 100%;
+  height: 251px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.main-container .card-content h3 {
+  color: black;
+}
+.main-container .card-subtitle {
+  margin-top: 0px;
+}
+.main-container .fa-heart {
+  width: 22px;
+  position: relative;
+  top: 225px;
+  left: 293px;
+  color: black;
+}
+.main-container .fa-heart:hover {
+  color: #FF79DA;
+}
+.main-container .new {
+  position: relative;
+  left: 250px;
+  top: 33px;
+  height: 30px;
+  width: 80px;
+  border-radius: 2px;
+  text-align: center;
+  background-color: var(--lightgreen-color);
+  color: var(--darkergreen-color);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.main-container .Bigfoot {
+  margin-top: 50px;
+  padding: 20px;
+  height: 188px;
+  background-color: var(--footer-color);
+}
+.main-container .Littlefoot p {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+.main-container .Littlefoot h3 {
+  color: white;
+  font-family: "Shrikhand", cursive;
 }/*# sourceMappingURL=style.css.map */

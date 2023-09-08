@@ -5,6 +5,12 @@
     --lightgreen-color: #99E2D0;
     --darkergreen-color: #008766;
     --background-color: #F6F6F6;
+    --gradient-color: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+    --footer-color: #353535;
+}
+
+* {
+    font-family: 'Roboto';
 }
 
 h1 {
@@ -22,16 +28,18 @@ h1 {
 
 p {
     /* Pour les textes */
-    font-family: 'Roboto';
     color: #353535;
 
 }
 
+
 .section-title {
-    font-family: 'Roboto';
     font-size: 24px;
 }
 
+a {
+    text-decoration: none;
+}
 
 body {
     margin: 0;
@@ -43,133 +51,304 @@ body {
 .main-container {
     width: 100%;
     box-sizing: border-box;
-}
 
-.localisation-bar {
-    background-color: #EAEAEA;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 50px;
-}
+    .localisation-bar {
+        background-color: #EAEAEA;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 50px;
+    }
 
-.localisation-bar i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #353535;
-}
+    .localisation-bar i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #353535;
+    }
 
-.localisation-bar input {
-    border-width: 0px;
-}
+    .localisation-bar input {
+        border-width: 0px;
+    }
 
-input::placeholder {
-    background-color: #EAEAEA;
-    font-size: 16px;
-    color: #353535;
-    text-align: center;
-}
+    input::placeholder {
+        background-color: #EAEAEA;
+        font-size: 16px;
+        color: #353535;
+        text-align: center;
+    }
 
-/* Firefox compatibilité */
+    /* Firefox compatibilité */
 
-/* SOurce : https://stackoverflow.com/questions/19621306/css-placeholder-text-color-on-firefox */
-
-
-:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    color: black;
-    opacity: 1;
-}
-
-::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    color: black;
-    opacity: 1;
-}
-
-.Titreshadow {
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
-}
+    /* SOurce : https://stackoverflow.com/questions/19621306/css-placeholder-text-color-on-firefox */
 
 
-/* Bouton Explorer */
-.explorer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-}
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: black;
+        opacity: 1;
+    }
 
-.explorer h2 {
-    text-align: center;
-    margin-bottom: 0px;
-    margin-top: 50px;
-}
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: black;
+        opacity: 1;
+    }
 
-.explorer p {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 21px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    background: rgb(147, 86, 220);
-    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
-    text-align: center;
-    border-radius: 25px;
-    font-size: 16px;
-    color: white;
-    height: 50px;
-    width: 218px;
-    font-family: 'Roboto';
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
-    border: 0px;
-}
+    .Titreshadow {
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+    }
 
 
+    /* Bouton Explorer */
+    .explorer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
 
-/* Fonctionnement */
+    .explorer h2 {
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 50px;
+    }
 
-.Fonctionnement {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-}
+    .explorer p {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 21px;
+        margin-bottom: 30px;
+    }
 
-.Fonctionnement h2 {
-    margin-left: 20px;
-}
+    .btn {
+        background: var(--gradient-color);
+        text-align: center;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        color: white;
+        height: 50px;
+        width: 218px;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        border: 0px;
 
-.fontion-list {
-    padding-left: 25px;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+        &:hover {
+            filter: brightness(115%);
+        }
+    }
 
-.btn-list {
-    background-color: #f6f6f6;
-    display: flex;
-    align-items: center;
-    padding: 0px 0px 0px 15px;
-    border-radius: 20px;
-    border: 0px;
-    width: 323px;
-    height: 72px;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
-}
+    // main
 
-.btn-list i {
-    margin-right: 20px;
-    margin-left: 20px;
-}
+    main {
+        padding: 0px 20px 0px 20px;
+    }
 
-.Fonctionnement ul {
-    list-style-type: none;
+    /* Fonctionnement */
+
+    .Fonctionnement {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    .Fonctionnement h2 {
+        margin-left: 20px;
+    }
+
+    .fontion-list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    ul {
+        padding-left: 10px;
+        margin-right: 20px;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .nb-btn {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        border-radius: 50%;
+        /* Utiliser un border-radius de 50% pour créer un cercle */
+        padding: 1px;
+        /* Espace à l'intérieur de la bordure */
+        height: 24px;
+        width: 24px;
+        position: relative;
+        left: 10px;
+
+    }
+
+    .btn-list {
+        background-color: #f6f6f6;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        border: 0px;
+        width: 100%;
+        height: 72px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .btn-list i {
+        padding: 0px 25px 0px 25px;
+        color: #7e7e7e;
+    }
+
+    .btn-list .fa-store {
+        color: var(--primary-color);
+    }
+
+    .Fonctionnement ul {
+        list-style-type: none;
+    }
+
+
+    // Cartes
+    .card {
+        background-color: white;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    .card img {
+        object-fit: cover;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    // Restaurants
+
+
+    .Restaurants-cards {
+        // display: flex;
+        flex-direction: column;
+        gap: 15px
+    }
+
+    .Restaurants h2 {
+        margin-bottom: 10px;
+        padding-top: 30px;
+    }
+
+    .Restaurants-cards .card {
+        display: flex;
+        width: 100%;
+        height: 251px;
+        padding: 0px;
+    }
+
+    .Restaurants-cards img {
+        width: 100%;
+        height: 70%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .Restaurants-cards .card-content {
+        width: 100%;
+        height: 30%;
+        box-sizing: border-box;
+    }
+
+    .card-txt {
+        margin-left: 15px;
+    }
+
+    .card-title {
+        margin-top: 12px;
+        margin-bottom: 0px;
+    }
+
+    .card-content {
+        width: 100%;
+        height: 251px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card-content h3 {
+        color: black;
+    }
+
+    .card-subtitle {
+        margin-top: 0px;
+    }
+
+    .fa-heart {
+        width: 22px;
+        position: relative;
+        top: 225px;
+        left: 293px;
+        color: black;
+
+        &:hover {
+            color: #FF79DA;
+        }
+    }
+
+
+
+
+    .new {
+        position: relative;
+        left: 250px;
+        top: 33px;
+        height: 30px;
+        width: 80px;
+        border-radius: 2px;
+        text-align: center;
+        background-color: var(--lightgreen-color);
+        color: var(--darkergreen-color);
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+
+
+    // Le Footer
+
+    .Bigfoot {
+        // display: flex;
+        // flex-direction: column;
+        margin-top: 50px;
+        padding: 20px;
+        height: 188px;
+        background-color: var(--footer-color);
+    }
+
+    .Littlefoot p {
+        font-size: 18px;
+        color: white;
+        margin-bottom: 5px;
+        margin-top: 0px;
+    }
+
+    .Littlefoot h3 {
+        color: white;
+        font-family: 'Shrikhand', cursive;
+    }
+
 }
