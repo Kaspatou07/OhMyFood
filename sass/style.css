@@ -197,6 +197,9 @@ body {
 .main-container .Fonctionnement ul {
   list-style-type: none;
 }
+.main-container .Fonctionnement {
+  margin-bottom: 30px;
+}
 .main-container .card {
   background-color: white;
   border-radius: 20px;
@@ -219,12 +222,12 @@ body {
   padding-top: 30px;
 }
 .main-container .Restaurants-cards a {
-  display: flex;
   width: 100%;
   height: 251px;
 }
 .main-container .card {
   padding: 0px;
+  height: 251px;
 }
 .main-container .Restaurants-cards img {
   width: 100%;
@@ -237,42 +240,53 @@ body {
   height: 30%;
   box-sizing: border-box;
 }
-.main-container .card-txt {
-  margin-left: 15px;
-}
-.main-container .card-title {
-  margin-top: 12px;
-  margin-bottom: 0px;
-}
 .main-container .card-content h3 {
   color: black;
   margin-left: 5px;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 5px;
 }
 .main-container .card-txt p {
   margin-top: 0px;
   margin-left: 5px;
 }
-.main-container .card-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 .main-container .card-txt {
   display: flex;
   flex-direction: column;
+  margin-left: 15px;
+}
+.main-container .Heart {
+  margin-top: -60px;
+  padding-left: 280px;
 }
 .main-container .card-content i {
-  color: black;
-  margin-right: 20px;
-  margin-top: 25px;
-  font-size: 26px;
+  position: absolute;
 }
-.main-container .card-content i:hover {
-  font-weight: 800;
-  color: var(--primary-color);
-  transition: 500ms;
+.main-container .my-heart-full {
+  opacity: 0;
+  transition-duration: 200ms;
+}
+.main-container .my-heart-full:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+          background-clip: text;
+  --webkit-background-clip: text;
+}
+.main-container .badge {
+  width: 80px;
+  height: 29px;
+  font-size: 16px;
+  color: var(--darkergreen-color);
+  background-color: var(--lightgreen-color);
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: -65%;
+  left: 75%;
+  padding: 5px;
+  overflow: hidden;
 }
 .main-container .Bigfoot {
   margin-top: 50px;
@@ -283,10 +297,100 @@ body {
 .main-container .Littlefoot p {
   font-size: 18px;
   color: white;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   margin-top: 0px;
 }
 .main-container .Littlefoot h3 {
   color: white;
   font-family: "Shrikhand", cursive;
+}
+.main-container .Littlefoot i {
+  margin-right: 10px;
+}
+.main-container main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  position: relative;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  background-color: var(--background-color);
+  top: -40px;
+  border-top-width: 2px;
+}
+.main-container .headBar_menu {
+  height: 63px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 40px;
+}
+.main-container .headBar_menu a {
+  color: black;
+}
+.main-container .headBar_menu img {
+  width: 198px;
+  height: 38px;
+  padding-left: 30px;
+}
+.main-container .img_menu img {
+  width: 100%;
+  height: 275px;
+}
+.main-container .Nom_resto {
+  display: flex;
+  flex-direction: row;
+}
+.main-container .menu_resto {
+  margin-bottom: 30px;
+}
+.main-container .menu_list h2 {
+  font-family: "Shrikhand", cursive;
+}
+.main-container .menu_list i {
+  position: absolute;
+}
+.main-container .Heart-menu {
+  margin-top: 30px;
+  padding-left: 50px;
+}
+.main-container .menu_resto h3 {
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: var(--lightgreen-color);
+  width: 10%;
+}
+.main-container .menu_button {
+  height: 72px;
+  background-color: white;
+  border-radius: 20px;
+  border: 0px;
+  width: 100%;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+.main-container .menu_button h4 {
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.main-container .menu_button p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 75%;
+  margin-left: 20px;
+  margin-top: 0px;
+  font-weight: 300;
+}
+.main-container .euro {
+  position: absolute;
+  left: 300px;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
