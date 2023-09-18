@@ -54,7 +54,8 @@ body {
   /* SOurce : https://stackoverflow.com/questions/19621306/css-placeholder-text-color-on-firefox */
   /* Bouton Explorer */
   /* Fonctionnement */
-  /* Styles de base pour le loader */
+  /* Cacher la case à cocher */
+  /* Background pour le loader et pour le page d'acceuil */
 }
 .main-container .localisation-bar {
   background-color: #EAEAEA;
@@ -266,17 +267,20 @@ body {
 .main-container .card-content i {
   position: absolute;
 }
+.main-container .my-heart-empty {
+  color: black;
+}
 .main-container .my-heart-full {
   opacity: 0;
-  transition-duration: 200ms;
-}
-.main-container .my-heart-full:hover {
-  opacity: 1;
   color: transparent;
   background-image: linear-gradient(to top, var(--primary-color), var(--secondary-color));
   -webkit-background-clip: text;
           background-clip: text;
   --webkit-background-clip: text;
+  transition-duration: 300ms;
+}
+.main-container .my-heart-full:hover {
+  opacity: 1;
 }
 .main-container .badge {
   width: 80px;
@@ -293,7 +297,6 @@ body {
   overflow: hidden;
 }
 .main-container .Bigfoot {
-  margin-top: 50px;
   padding: 20px;
   height: 188px;
   background-color: var(--footer-color);
@@ -345,9 +348,10 @@ body {
 .main-container .Nom_resto {
   display: flex;
   flex-direction: row;
+  margin-top: 10px;
 }
 .main-container .menu_resto {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .main-container .menu_list h2 {
   font-family: "Shrikhand", cursive;
@@ -356,8 +360,9 @@ body {
   position: absolute;
 }
 .main-container .Heart-menu {
-  margin-top: 30px;
-  padding-left: 50px;
+  position: absolute;
+  left: 300px;
+  top: 30px;
 }
 .main-container .menu_resto h3 {
   font-weight: 300;
@@ -372,11 +377,18 @@ body {
   background-color: white;
   border-radius: 20px;
   border: 0px;
-  width: 100%;
+  width: 349px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
   margin-bottom: 10px;
+  box-sizing: border-box;
 }
 .main-container .menu_button h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 70%;
   margin-left: 20px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -388,15 +400,98 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: 75%;
+  width: 60%;
   margin-left: 20px;
   margin-top: 0px;
-  font-weight: 300;
+  font-weight: 100;
+}
+.main-container .box {
+  position: relative;
+  left: 50px;
+  top: -20px;
+  width: 60px;
+  height: 73px;
+  font-size: 18px;
+  color: var(--lightgreen-color);
+  background-color: var(--lightgreen-color);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-width: 0px;
+  margin-bottom: -60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-container .menu-toggle {
+  display: none;
+}
+.main-container .btnn-1 .box,
+.main-container .btnn-2 .box,
+.main-container .btnn-3 .box,
+.main-container .btnn-4 .box,
+.main-container .btnn-5 .box,
+.main-container .btnn-6 .box,
+.main-container .btnn-7 .box,
+.main-container .btnn-8 .box,
+.main-container .btnn-9 .box,
+.main-container .btnn-99 .box {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.main-container .btnn-1 .euro,
+.main-container .btnn-2 .euro,
+.main-container .btnn-3 .euro,
+.main-container .btnn-4 .euro,
+.main-container .btnn-5 .euro,
+.main-container .btnn-6 .euro,
+.main-container .btnn-7 .euro,
+.main-container .btnn-8 .euro,
+.main-container .btnn-9 .euro,
+.main-container .btnn-99 .euro {
+  transition: transform 0.3s ease-in-out;
+}
+.main-container #menuToggle1:checked ~ .btnn-1 .translation .box,
+.main-container #menuToggle1:checked ~ .btnn-1 .translation .euro,
+.main-container #menuToggle2:checked ~ .btnn-2 .translation .box,
+.main-container #menuToggle2:checked ~ .btnn-2 .translation .euro,
+.main-container #menuToggle3:checked ~ .btnn-3 .translation .box,
+.main-container #menuToggle3:checked ~ .btnn-3 .translation .euro,
+.main-container #menuToggle4:checked ~ .btnn-4 .translation .box,
+.main-container #menuToggle4:checked ~ .btnn-4 .translation .euro,
+.main-container #menuToggle5:checked ~ .btnn-5 .translation .box,
+.main-container #menuToggle5:checked ~ .btnn-5 .translation .euro,
+.main-container #menuToggle6:checked ~ .btnn-6 .translation .box,
+.main-container #menuToggle6:checked ~ .btnn-6 .translation .euro,
+.main-container #menuToggle7:checked ~ .btnn-7 .translation .box,
+.main-container #menuToggle7:checked ~ .btnn-7 .translation .euro,
+.main-container #menuToggle8:checked ~ .btnn-8 .translation .box,
+.main-container #menuToggle8:checked ~ .btnn-8 .translation .euro,
+.main-container #menuToggle9:checked ~ .btnn-9 .translation .box,
+.main-container #menuToggle9:checked ~ .btnn-9 .translation .euro,
+.main-container #menuToggle99:checked ~ .btnn-99 .translation .box,
+.main-container #menuToggle99:checked ~ .btnn-99 .translation .euro {
+  transform: translate(-60px);
+  /* Décalage de -60px */
+}
+.main-container .translation {
+  position: relative;
+  top: -72px;
+  left: 300px;
+  height: 73px;
 }
 .main-container .euro {
-  position: absolute;
-  left: 300px;
-  font-weight: 700;
+  width: 60px;
+  position: relative;
+  top: 40px;
+  color: black;
+  font-weight: 800;
+}
+.main-container .fa-check {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 1px;
+  background-color: white;
+  color: var(--lightgreen-color);
 }
 .main-container .loader {
   position: fixed;
@@ -409,7 +504,7 @@ body {
   justify-content: center;
   align-items: center;
   opacity: 1;
-  animation: loaderFadeOut 3s ease forwards;
+  animation: loaderFadeOut 3s ease-in-out 1s forwards;
 }
 .main-container .loader::after {
   content: "";
@@ -439,7 +534,7 @@ body {
 }
 .main-container .loaderMenu {
   position: relative;
-  top: -70px;
+  top: -145px;
   left: 0;
   width: 100%;
   height: 70px;
@@ -449,7 +544,7 @@ body {
   align-items: center;
   border-radius: 25px;
   opacity: 1;
-  animation: loaderFadeOut 3s ease-in-out forwards;
+  animation: loaderFadeOut 1s ease-in-out 1s forwards;
 }
 .main-container .loaderMenu::after {
   content: "";
@@ -463,9 +558,15 @@ body {
 .main-container .Entree {
   animation: loaderFadeOut 1s ease-in-out 0.33s forwards;
 }
-.main-container .Plats {
+.main-container .Entree2 {
   animation: loaderFadeOut 1s ease-in-out 0.66s forwards;
 }
-.main-container .Desserts {
+.main-container .Entree3 {
   animation: loaderFadeOut 1s ease-in-out 0.99s forwards;
+}
+.main-container .Plats {
+  animation: loaderFadeOut 1s ease-in-out 1.2s forwards;
+}
+.main-container .Desserts {
+  animation: loaderFadeOut 1s ease-in-out 1.6s forwards;
 }/*# sourceMappingURL=style.css.map */

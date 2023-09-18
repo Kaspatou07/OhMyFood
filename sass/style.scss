@@ -306,6 +306,7 @@ body {
         margin-left: 15px;
     }
 
+    //Pour les cartes sans le badge "nouveau" sur la page d'acceuil
     .sans-Badge {
         margin-top: 15px;
     }
@@ -320,22 +321,24 @@ body {
 
     }
 
+    .my-heart-empty {
+        color: black;
+    }
+
     .my-heart-full {
         opacity: 0;
-        transition-duration: 200ms;
+        color: transparent;
+        background-image: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+        // Pour Firefox
+        background-clip: text; //pour avoir la couleur sur le texte
+        // Pour chrome
+        --webkit-background-clip: text;
+        transition-duration: 300ms;
     }
 
     .my-heart-full:hover {
         opacity: 1;
-        color: transparent;
-        background-image: linear-gradient(to top, var(--primary-color), var(--secondary-color));
-        // Pour Firefox
-        background-clip: text;
-        // Pour chrome
-        --webkit-background-clip: text;
     }
-
-
 
     .badge {
         width: 80px;
@@ -356,7 +359,6 @@ body {
     // Le Footer
 
     .Bigfoot {
-        margin-top: 50px;
         padding: 20px;
         height: 188px;
         background-color: var(--footer-color);
@@ -379,7 +381,7 @@ body {
     }
 
     // 
-    // resto_1 
+    // Menu-resto
     // 
 
     main {
@@ -423,10 +425,11 @@ body {
     .Nom_resto {
         display: flex;
         flex-direction: row;
+        margin-top: 10px;
     }
 
     .menu_resto {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
 
@@ -438,9 +441,11 @@ body {
         position: absolute;
     }
 
+    // Position du coeur dans les menu resto
     .Heart-menu {
-        margin-top: 30px;
-        padding-left: 50px;
+        position: absolute;
+        left: 300px;
+        top: 30px;
     }
 
     .menu_resto h3 {
@@ -457,13 +462,19 @@ body {
         background-color: white;
         border-radius: 20px;
         border: 0px;
-        width: 100%;
+        width: 349px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        cursor: pointer;
         margin-bottom: 10px;
-        // box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     .menu_button h4 {
+        text-overflow: ellipsis; // pour afficher les ...  lorsque le texte est coupé
+        overflow: hidden; // cacher ce qui dépasse
+        white-space: nowrap; // Pour ne pas que le texte passe à la ligne
+        width: 70%;
         margin-left: 20px;
         margin-top: 0px;
         margin-bottom: 0px;
@@ -473,27 +484,153 @@ body {
     }
 
     .menu_button p {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        width: 75%;
+        text-overflow: ellipsis; // pour afficher les ...  lorsque le texte est coupé
+        overflow: hidden; // cacher ce qui dépasse
+        white-space: nowrap; // Pour ne pas que le texte passe à la ligne
+        width: 60%;
         margin-left: 20px;
         margin-top: 0px;
-        font-weight: 300;
+        font-weight: 100;
     }
+
+
+    // Badge validation vert
+
+    .box {
+        position: relative;
+        left: 50px;
+        top: -20px;
+        width: 60px;
+        height: 73px;
+        font-size: 18px;
+        color: var(--lightgreen-color);
+        background-color: var(--lightgreen-color);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-width: 0px;
+        margin-bottom: -60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* Cacher la case à cocher */
+    .menu-toggle {
+        display: none;
+    }
+
+    // pour rendre l'animation des box plus fluide
+    .btnn-1 .box,
+    .btnn-2 .box,
+    .btnn-3 .box,
+    .btnn-4 .box,
+    .btnn-5 .box,
+    .btnn-6 .box,
+    .btnn-7 .box,
+    .btnn-8 .box,
+    .btnn-9 .box,
+    .btnn-99 .box {
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+        // pour regler la durée de l'animation
+    }
+
+    // pour rendre l'animation du prix plus fluide
+    .btnn-1 .euro,
+    .btnn-2 .euro,
+    .btnn-3 .euro,
+    .btnn-4 .euro,
+    .btnn-5 .euro,
+    .btnn-6 .euro,
+    .btnn-7 .euro,
+    .btnn-8 .euro,
+    .btnn-9 .euro,
+    .btnn-99 .euro {
+        transition: transform 0.3s ease-in-out;
+        // pour regler la durée de l'animation
+    }
+
+    //  Lorsque l'on clique dessus
+    #menuToggle1:checked~.btnn-1 .translation .box,
+    #menuToggle1:checked~.btnn-1 .translation .euro,
+    #menuToggle2:checked~.btnn-2 .translation .box,
+    #menuToggle2:checked~.btnn-2 .translation .euro,
+    #menuToggle3:checked~.btnn-3 .translation .box,
+    #menuToggle3:checked~.btnn-3 .translation .euro,
+    #menuToggle4:checked~.btnn-4 .translation .box,
+    #menuToggle4:checked~.btnn-4 .translation .euro,
+    #menuToggle5:checked~.btnn-5 .translation .box,
+    #menuToggle5:checked~.btnn-5 .translation .euro,
+    #menuToggle6:checked~.btnn-6 .translation .box,
+    #menuToggle6:checked~.btnn-6 .translation .euro,
+    #menuToggle7:checked~.btnn-7 .translation .box,
+    #menuToggle7:checked~.btnn-7 .translation .euro,
+    #menuToggle8:checked~.btnn-8 .translation .box,
+    #menuToggle8:checked~.btnn-8 .translation .euro,
+    #menuToggle9:checked~.btnn-9 .translation .box,
+    #menuToggle9:checked~.btnn-9 .translation .euro,
+    #menuToggle99:checked~.btnn-99 .translation .box,
+    #menuToggle99:checked~.btnn-99 .translation .euro {
+        transform: translate(-60px);
+        /* Décalage de -60px */
+    }
+
+    // // lorsque l'on reclique (décoché)
+    // #menuToggle1:not(:checked)~.btnn-1 .translation .box,
+    // #menuToggle1:not(:checked)~.btnn-1 .translation .euro,
+    // #menuToggle2:not(:checked)~.btnn-2 .translation .box,
+    // #menuToggle2:not(:checked)~.btnn-2 .translation .euro,
+    // #menuToggle3:not(:checked)~.btnn-3 .translation .box,
+    // #menuToggle3:not(:checked)~.btnn-3 .translation .euro,
+    // #menuToggle4:not(:checked)~.btnn-4 .translation .box,
+    // #menuToggle4:not(:checked)~.btnn-4 .translation .euro,
+    // #menuToggle5:not(:checked)~.btnn-5 .translation .box,
+    // #menuToggle5:not(:checked)~.btnn-5 .translation .euro,
+    // #menuToggle6:not(:checked)~.btnn-6 .translation .box,
+    // #menuToggle6:not(:checked)~.btnn-6 .translation .euro,
+    // #menuToggle7:not(:checked)~.btnn-7 .translation .box,
+    // #menuToggle7:not(:checked)~.btnn-7 .translation .euro,
+    // #menuToggle8:not(:checked)~.btnn-8 .translation .box,
+    // #menuToggle8:not(:checked)~.btnn-8 .translation .euro,
+    // #menuToggle9:not(:checked)~.btnn-9 .translation .box,
+    // #menuToggle9:not(:checked)~.btnn-9 .translation .euro {
+    //     transform: translate(10px);
+    //     // Décalage de
+
+
+    // }
+
+    .translation {
+        position: relative;
+        top: -72px;
+        left: 300px;
+        height: 73px;
+    }
+
 
     .euro {
-        position: absolute;
-        left: 300px;
-        font-weight: 700;
+        width: 60px;
+        position: relative;
+        top: 40px;
+        color: black;
+        font-weight: 800;
     }
 
+
+    .fa-check {
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 1px;
+        background-color: white;
+        color: var(--lightgreen-color);
+    }
 
     // 
     // Loader
     // 
 
-    /* Styles de base pour le loader */
+    /* Background pour le loader et pour le page d'acceuil */
     .loader {
         position: fixed;
         top: 0;
@@ -504,12 +641,11 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        // z-index: 9999;
         opacity: 1;
-        // Durée de l'animation
-        animation: loaderFadeOut 3s ease forwards;
+        animation: loaderFadeOut 3s ease-in-out 1s forwards;
     }
 
+    // Style pour le loader
     .loader::after {
         content: "";
         border: 4px solid #f3f3f3;
@@ -520,6 +656,7 @@ body {
         animation: spin 1s linear infinite;
     }
 
+    // pour que le loader tourne
     @keyframes spin {
         0% {
             transform: rotate(0deg);
@@ -530,6 +667,7 @@ body {
         }
     }
 
+    // pour que le loader disparaisse
     @keyframes loaderFadeOut {
         0% {
             opacity: 1;
@@ -541,10 +679,10 @@ body {
         }
     }
 
-
+    // Loader pour les Menus
     .loaderMenu {
         position: relative;
-        top: -70px;
+        top: -145px;
         left: 0;
         width: 100%;
         height: 70px;
@@ -553,10 +691,8 @@ body {
         justify-content: center;
         align-items: center;
         border-radius: 25px;
-        // z-index: 9999;
         opacity: 1;
-        // Durée de l'animation
-        animation: loaderFadeOut 3s ease-in-out forwards;
+        animation: loaderFadeOut 1s ease-in-out 1s forwards;
     }
 
     .loaderMenu::after {
@@ -571,22 +707,30 @@ body {
 
     .Entree {
         animation: loaderFadeOut 1s ease-in-out 0.33s forwards;
+        // pour regler le temps pour que le loader disparaisse et la durée
     }
 
-    .Plats {
+    .Entree2 {
         animation: loaderFadeOut 1s ease-in-out 0.66s forwards;
+        // pour regler le temps pour que le loader disparaisse et la durée
+    }
+
+    .Entree3 {
+        animation: loaderFadeOut 1s ease-in-out 0.99s forwards;
+        // pour regler le temps pour que le loader disparaisse et la durée
+    }
+
+
+
+    .Plats {
+        animation: loaderFadeOut 1s ease-in-out 1.2s forwards;
+        // pour regler le temps pour que le loader disparaisse et la durée
     }
 
     .Desserts {
-        animation: loaderFadeOut 1s ease-in-out 0.99s forwards;
+        animation: loaderFadeOut 1s ease-in-out 1.6s forwards;
+        // pour regler le temps pour que le loader disparaisse et la durée
     }
-
-
-
-
-
-
-
 
 
 
