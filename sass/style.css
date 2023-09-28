@@ -34,6 +34,7 @@ p {
 
 .section-title {
   font-size: 24px;
+  font-weight: 700;
 }
 
 a {
@@ -48,13 +49,17 @@ body {
 }
 
 .main-container {
-  width: 375px;
+  width: 100%;
   box-sizing: border-box;
   /* Firefox compatibilité */
   /* SOurce : https://stackoverflow.com/questions/19621306/css-placeholder-text-color-on-firefox */
   /* Bouton Explorer */
   /* Fonctionnement */
   /* Background pour le loader de la page d'acceuil + position + animation */
+  /****** Media queries ***********/
+  /* Medium devices (tablets, between 768px and 1024px) */
+  /****** Media queries ***********/
+  /* Medium devices (Desktop, between 1024px and 1440px) */
 }
 .main-container .localisation-bar {
   background-color: #EAEAEA;
@@ -134,9 +139,6 @@ body {
 .main-container .btncom {
   margin-top: 20px;
 }
-.main-container main {
-  padding: 0px 20px 0px 20px;
-}
 .main-container .Fonctionnement {
   display: flex;
   flex-direction: column;
@@ -184,6 +186,10 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
+.main-container .btn-list p {
+  font-size: 16px;
+  font-weight: 700;
+}
 .main-container .btn-list i {
   padding: 0px 25px 0px 25px;
   color: #7e7e7e;
@@ -208,6 +214,11 @@ body {
 }
 .main-container .card-title {
   font-size: 18px;
+}
+.main-container .Restaurants {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
 }
 .main-container .Restaurants-cards {
   display: flex;
@@ -257,7 +268,7 @@ body {
 }
 .main-container .Heart {
   position: relative;
-  left: 275px;
+  left: 80%;
   top: -70px;
 }
 .main-container .Heart i {
@@ -303,24 +314,12 @@ body {
   margin-bottom: 8px;
   margin-top: 0px;
 }
-.main-container .Littlefoot h3 {
+.main-container .Bigfoot h3 {
   color: white;
   font-family: "Shrikhand", cursive;
 }
 .main-container .Littlefoot i {
   margin-right: 10px;
-}
-.main-container main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  position: relative;
-  border-top-right-radius: 40px;
-  border-top-left-radius: 40px;
-  background-color: var(--background-color);
-  top: -40px;
-  border-top-width: 2px;
 }
 .main-container .headBar_menu {
   height: 63px;
@@ -328,6 +327,7 @@ body {
   flex-direction: row;
   align-items: center;
   padding-left: 40px;
+  background-color: white;
 }
 .main-container .headBar_menu a {
   color: black;
@@ -340,11 +340,24 @@ body {
 .main-container .img_menu img {
   width: 100%;
   height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-container .Nom_resto {
-  display: flex;
-  flex-direction: row;
+  padding-right: 100px;
   margin-top: 10px;
+}
+.main-container .menu_list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  background-color: var(--background-color);
+  top: -40px;
+  border-top-width: 2px;
+  padding: 0px 20px 0px 20px;
+  align-items: center;
 }
 .main-container .menu_resto {
   margin-bottom: -265px;
@@ -360,7 +373,7 @@ body {
 }
 .main-container .Heart-menu {
   position: absolute;
-  left: 300px;
+  left: 80%;
   top: 30px;
 }
 .main-container .menu_resto h3 {
@@ -381,6 +394,7 @@ body {
   overflow: hidden;
   margin-bottom: 12px;
   box-sizing: border-box;
+  transition: 0.3s ease-in-out;
 }
 .main-container .menu-title {
   text-overflow: ellipsis;
@@ -392,13 +406,13 @@ body {
   padding-top: 15px;
   font-size: 18px;
   font-weight: 500;
-  transition: width 0.9s ease-in-out;
+  transition: 1.6s ease-in-out;
 }
 .main-container .menu-description {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  transition: width 0.9s ease-in-out;
+  transition: 1.6s ease-in-out;
 }
 .main-container .menu-desc-price {
   display: flex;
@@ -406,11 +420,11 @@ body {
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  transition: width 0.3s ease-in-out;
+  transition: 1.6s ease-in-out;
 }
 .main-container .box-check {
   position: relative;
-  left: 350px;
+  left: 100%;
   top: -60px;
   width: 60px;
   height: 73px;
@@ -426,17 +440,11 @@ body {
   justify-content: center;
   transition: transform 0.3s ease-in-out;
 }
+.main-container .menu_button:hover {
+  padding-right: 70px;
+}
 .main-container .menu_button:hover .box-check {
-  transform: translateX(-100%);
-}
-.main-container .menu_button:hover .euro {
-  transform: translateX(-200%);
-}
-.main-container .menu_button:hover .menu-description {
-  width: calc(100% - 90px);
-}
-.main-container .menu_button:hover .menu-title {
-  width: calc(100% - 100px);
+  transform: translateX(10px);
 }
 .main-container .euro {
   color: black;
@@ -522,4 +530,168 @@ body {
   height: 350px;
   position: relative;
   top: -350px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-container .Restaurants {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 40px;
+  }
+  .main-container .Fonctionnement {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .main-container .headBar_menu {
+    justify-content: center;
+    padding-left: 0px;
+  }
+  .main-container .Bcolor {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+  .main-container .Nom_resto {
+    padding-right: 0px;
+  }
+  .main-container .menu_list {
+    width: 80%;
+    align-items: center;
+  }
+  .main-container .badge {
+    left: 85%;
+  }
+  .main-container .Heart {
+    left: 90%;
+  }
+  .main-container .Bigfoot {
+    text-align: center;
+  }
+  .main-container .Littlefoot {
+    text-align: center;
+  }
+  .main-container .menu_list {
+    width: 80%;
+  }
+  .main-container .menu_button {
+    width: 634px;
+  }
+  .main-container .Heart-menu {
+    left: 70%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .main-container .explorer-title {
+    font-size: 40px;
+  }
+  .main-container .Fonctionnement {
+    padding: 50px 180px 50px 180px;
+  }
+  .main-container .Fonctionnement h2 {
+    margin-left: 0px;
+  }
+  .main-container .Fonctionnement li {
+    width: 335px;
+  }
+  .main-container .fonction-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 0px;
+    gap: 20px;
+  }
+  .main-container .btn-list {
+    width: 322px;
+  }
+  .main-container .Restaurants {
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-bottom: 40px;
+  }
+  .main-container .Restaurants-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .main-container .Restaurants-cards a {
+    width: 490px;
+  }
+  .main-container .card {
+    width: 490px;
+    height: 251px;
+  }
+  .main-container .Restaurants h2 {
+    margin-bottom: 25px;
+  }
+  .main-container .Heart {
+    left: 85%;
+    top: -80px;
+  }
+  .main-container .badge {
+    left: 80%;
+  }
+  .main-container .footer {
+    height: 114px;
+    padding: 30px, 25px, 30px, 25px;
+  }
+  .main-container .Bigfoot {
+    height: 114px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .main-container .Bigfoot h3 {
+    height: 27px;
+    position: relative;
+    top: 60px;
+    left: -40px;
+  }
+  .main-container .Littlefoot {
+    gap: 7px;
+    display: flex;
+    height: 20px;
+    position: relative;
+    top: 80px;
+    left: -100px;
+  }
+  .main-container .Littlefoot p,
+  .main-container a {
+    height: 20px;
+  }
+  .main-container .espacefooter {
+    padding-right: 40px;
+  }
+  .main-container .menu_list {
+    width: 80%;
+    align-items: center;
+    padding-bottom: 60px;
+  }
+  .main-container .Bcolor {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+  .main-container .Nom_resto {
+    padding-right: 0px;
+  }
+  .main-container .headBar_menu {
+    justify-content: center;
+    padding-left: 0px;
+  }
+  .main-container .headBar_menu a {
+    position: relative;
+    left: -38%;
+  }
+  .main-container .menu_resto {
+    width: 634px;
+  }
+  .main-container .menu_button {
+    width: 100%;
+  }
+  .main-container .Heart-menu {
+    left: 63%;
+  }
+  .main-container footer {
+    position: relative;
+    top: -40px;
+  }
 }/*# sourceMappingURL=style.css.map */
