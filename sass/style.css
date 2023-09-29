@@ -59,7 +59,7 @@ body {
   /****** Media queries ***********/
   /* Medium devices (tablets, between 768px and 1024px) */
   /****** Media queries ***********/
-  /* Medium devices (Desktop, between 1024px and 1440px) */
+  /* Large devices (Desktop, between 1024px and 1440px) */
 }
 .main-container .localisation-bar {
   background-color: #EAEAEA;
@@ -360,10 +360,8 @@ body {
   align-items: center;
 }
 .main-container .menu_resto {
-  margin-bottom: -265px;
-}
-.main-container .menu_entree {
-  margin-bottom: -340px;
+  height: 270px;
+  padding-bottom: 50px;
 }
 .main-container .menu_list h2 {
   font-family: "Shrikhand", cursive;
@@ -556,6 +554,7 @@ body {
   .main-container .menu_list {
     width: 80%;
     align-items: center;
+    padding-bottom: 50px;
   }
   .main-container .badge {
     left: 85%;
@@ -563,8 +562,14 @@ body {
   .main-container .Heart {
     left: 90%;
   }
+  .main-container footer {
+    position: relative;
+    height: 114px;
+    top: -40px;
+  }
   .main-container .Bigfoot {
     text-align: center;
+    padding-bottom: 55px;
   }
   .main-container .Littlefoot {
     text-align: center;
@@ -595,6 +600,7 @@ body {
   .main-container .fonction-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     padding-left: 0px;
     gap: 20px;
@@ -612,12 +618,15 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
+    padding-bottom: 50px;
   }
   .main-container .Restaurants-cards a {
-    width: 490px;
+    width: 100%;
+    max-width: 490px;
   }
   .main-container .card {
-    width: 490px;
+    width: 100%;
+    max-width: 490px;
     height: 251px;
   }
   .main-container .Restaurants h2 {
@@ -630,14 +639,16 @@ body {
   .main-container .badge {
     left: 80%;
   }
-  .main-container .footer {
+  .main-container footer {
+    position: relative;
     height: 114px;
-    padding: 30px, 25px, 30px, 25px;
+    top: -40px;
   }
   .main-container .Bigfoot {
     height: 114px;
     display: flex;
     flex-direction: row-reverse;
+    padding-bottom: 55px;
   }
   .main-container .Bigfoot h3 {
     height: 27px;
@@ -658,12 +669,13 @@ body {
     height: 20px;
   }
   .main-container .espacefooter {
-    padding-right: 40px;
+    padding-right: 30px;
   }
   .main-container .menu_list {
-    width: 80%;
+    width: 75%;
     align-items: center;
-    padding-bottom: 60px;
+    padding-bottom: 35px;
+    z-index: 9;
   }
   .main-container .Bcolor {
     background-color: white;
@@ -684,14 +696,14 @@ body {
   .main-container .menu_resto {
     width: 634px;
   }
+  .main-container .menu_entree {
+    height: 350px;
+  }
   .main-container .menu_button {
     width: 100%;
+    max-width: 634px;
   }
   .main-container .Heart-menu {
     left: 63%;
-  }
-  .main-container footer {
-    position: relative;
-    top: -40px;
   }
 }/*# sourceMappingURL=style.css.map */
