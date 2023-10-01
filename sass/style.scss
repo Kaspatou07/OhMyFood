@@ -458,6 +458,10 @@ body {
         padding-bottom: 50px;
     }
 
+    .menu_entree {
+        height: 350px;
+    }
+
 
     .menu_list h2 {
         font-family: 'Shrikhand', cursive;
@@ -686,7 +690,7 @@ body {
         .Restaurants {
             padding-left: 80px;
             padding-right: 80px;
-            padding-bottom: 40px;
+            padding-bottom: 100px;
         }
 
         .Fonctionnement {
@@ -748,6 +752,10 @@ body {
         .menu_button {
             // width: 100%;
             width: 634px;
+        }
+
+        .menu_entree {
+            height: 350px;
         }
 
         .Heart-menu {
