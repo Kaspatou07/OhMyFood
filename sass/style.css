@@ -57,9 +57,9 @@ body {
   /* Fonctionnement */
   /* Background pour le loader de la page d'acceuil + position + animation */
   /****** Media queries ***********/
-  /* Medium devices (tablets, between 768px and 1024px) */
+  /* Medium devices and large (tablets, between 500px and 1439px) */
   /****** Media queries ***********/
-  /* Large devices (Desktop, between 1024px and 1440px) */
+  /*  Extra Large devices (Desktop, between 1440px and 2160px) */
 }
 .main-container .localisation-bar {
   background-color: #EAEAEA;
@@ -143,9 +143,15 @@ body {
   display: flex;
   flex-direction: column;
   background-color: white;
+  margin-bottom: 30px;
 }
 .main-container .Fonctionnement h2 {
   margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+.main-container .Fonctionnement ul {
+  list-style-type: none;
 }
 .main-container ul {
   padding-left: 10px;
@@ -181,6 +187,7 @@ body {
   border-radius: 20px;
   border: 0px;
   width: 100%;
+  max-width: 323px;
   height: 72px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
   font-size: 16px;
@@ -197,12 +204,6 @@ body {
 .main-container .btn-list .fa-store {
   color: var(--primary-color);
 }
-.main-container .Fonctionnement ul {
-  list-style-type: none;
-}
-.main-container .Fonctionnement {
-  margin-bottom: 30px;
-}
 .main-container .card {
   background-color: white;
   border-radius: 20px;
@@ -216,6 +217,8 @@ body {
   font-size: 18px;
 }
 .main-container .Restaurants {
+  display: flex;
+  flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
@@ -226,7 +229,7 @@ body {
   gap: 15px;
 }
 .main-container .Restaurants h2 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   padding-top: 30px;
 }
 .main-container .Restaurants-cards a {
@@ -234,6 +237,7 @@ body {
   height: 251px;
 }
 .main-container .card {
+  max-width: 340px;
   padding: 0px;
   height: 251px;
 }
@@ -304,6 +308,8 @@ body {
   overflow: hidden;
 }
 .main-container .Bigfoot {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   height: 188px;
   background-color: var(--footer-color);
@@ -374,7 +380,7 @@ body {
 }
 .main-container .Heart-menu {
   position: absolute;
-  left: 80%;
+  margin-left: 260px;
   top: 30px;
 }
 .main-container .menu_resto h3 {
@@ -406,7 +412,7 @@ body {
   margin-bottom: 5px;
   padding-top: 15px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 800;
   transition: 1.6s ease-in-out;
 }
 .main-container .menu-description {
@@ -414,6 +420,8 @@ body {
   overflow: hidden;
   white-space: nowrap;
   transition: 1.6s ease-in-out;
+  font-size: 15px;
+  font-weight: 300;
 }
 .main-container .menu-desc-price {
   display: flex;
@@ -532,15 +540,14 @@ body {
   position: relative;
   top: -350px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  .main-container .Restaurants {
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 100px;
-  }
+@media (min-width: 500px) and (max-width: 1439px) {
   .main-container .Fonctionnement {
     padding-left: 60px;
     padding-right: 60px;
+    align-items: center;
+  }
+  .main-container .Fonctionnement h2 {
+    margin-right: 190px;
   }
   .main-container .headBar_menu {
     justify-content: center;
@@ -551,6 +558,15 @@ body {
     display: flex;
     justify-content: center;
   }
+  .main-container .Restaurants {
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 100px;
+  }
+  .main-container .Restaurants h2 {
+    margin-right: 210px;
+  }
   .main-container .Nom_resto {
     padding-right: 0px;
   }
@@ -559,11 +575,8 @@ body {
     align-items: center;
     padding-bottom: 50px;
   }
-  .main-container .badge {
-    left: 85%;
-  }
-  .main-container .Heart {
-    left: 90%;
+  .main-container .btn-list {
+    width: 323px;
   }
   .main-container footer {
     position: relative;
@@ -580,44 +593,34 @@ body {
   .main-container .menu_list {
     width: 80%;
   }
-  .main-container .menu_button {
-    width: 634px;
-  }
   .main-container .menu_entree {
     height: 350px;
   }
-  .main-container .Heart-menu {
-    left: 70%;
-  }
 }
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1440px) and (max-width: 2160px) {
   .main-container .explorer-title {
     font-size: 40px;
   }
   .main-container .Fonctionnement {
     padding: 50px 180px 50px 180px;
+    align-items: center;
   }
   .main-container .Fonctionnement h2 {
-    margin-left: 0px;
+    margin-right: 950px;
   }
-  .main-container .Fonctionnement li {
-    width: 335px;
+  .main-container .btn-list {
+    width: 322px;
   }
   .main-container .fonction-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    padding-left: 0px;
     gap: 20px;
   }
   .main-container .btn-list {
     width: 322px;
   }
   .main-container .Restaurants {
-    padding-left: 180px;
-    padding-right: 180px;
-    padding-bottom: 40px;
+    align-items: center;
   }
   .main-container .Restaurants-cards {
     flex-direction: row;
@@ -625,6 +628,7 @@ body {
     justify-content: space-between;
     gap: 50px;
     padding-bottom: 50px;
+    max-width: 1100px;
   }
   .main-container .Restaurants-cards a {
     width: 100%;
@@ -637,6 +641,7 @@ body {
   }
   .main-container .Restaurants h2 {
     margin-bottom: 25px;
+    margin-right: 970px;
   }
   .main-container .Heart {
     left: 85%;
@@ -708,8 +713,5 @@ body {
   .main-container .menu_button {
     width: 100%;
     max-width: 634px;
-  }
-  .main-container .Heart-menu {
-    left: 63%;
   }
 }/*# sourceMappingURL=style.css.map */

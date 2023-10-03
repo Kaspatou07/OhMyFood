@@ -155,13 +155,18 @@ body {
         display: flex;
         flex-direction: column;
         background-color: white;
+        margin-bottom: 30px;
     }
 
     .Fonctionnement h2 {
         margin-left: 20px;
+        margin-bottom: 10px;
+        margin-top: 40px;
     }
 
-
+    .Fonctionnement ul {
+        list-style-type: none;
+    }
 
     ul {
         padding-left: 10px;
@@ -204,6 +209,7 @@ body {
         border-radius: 20px;
         border: 0px;
         width: 100%;
+        max-width: 323px;
         height: 72px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
         font-size: 16px;
@@ -224,17 +230,11 @@ body {
         color: var(--primary-color);
     }
 
-    .Fonctionnement ul {
-        list-style-type: none;
-    }
 
-    .Fonctionnement {
-        margin-bottom: 30px;
-    }
 
     // 
     // Cartes
-
+    // 
     .card {
         background-color: white;
         border-radius: 20px;
@@ -254,6 +254,8 @@ body {
     // 
 
     .Restaurants {
+        display: flex;
+        flex-direction: column;
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 40px;
@@ -266,7 +268,7 @@ body {
     }
 
     .Restaurants h2 {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         padding-top: 30px;
     }
 
@@ -276,6 +278,7 @@ body {
     }
 
     .card {
+        max-width: 340px;
         padding: 0px;
         height: 251px;
     }
@@ -378,6 +381,8 @@ body {
     // Le Footer
 
     .Bigfoot {
+        display: flex;
+        flex-direction: column;
         padding: 20px;
         height: 188px;
         background-color: var(--footer-color);
@@ -474,7 +479,8 @@ body {
     // Position du coeur dans les menu resto
     .Heart-menu {
         position: absolute;
-        left: 80%;
+        // left: 80%;
+        margin-left: 260px;
         top: 30px;
     }
 
@@ -513,7 +519,7 @@ body {
         margin-bottom: 5px;
         padding-top: 15px;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 800;
         transition: 1.6s ease-in-out;
     }
 
@@ -522,6 +528,8 @@ body {
         overflow: hidden; // cacher ce qui dépasse
         white-space: nowrap; // Pour ne pas que le texte passe à la ligne
         transition: 1.6s ease-in-out;
+        font-size: 15px;
+        font-weight: 300;
     }
 
     .menu-desc-price {
@@ -675,7 +683,7 @@ body {
         // pour regler le temps pour que le loader disparaisse et la durée
     }
 
-    // Pour le loader de la partie "ENtrée" "Note enchanté" 
+    // Pour le loader de la partie "ENtrée" "Note Enchanté" 
     .NE {
         height: 350px;
         position: relative;
@@ -683,19 +691,19 @@ body {
     }
 
     /****** Media queries ***********/
-    /* Medium devices (tablets, between 768px and 1024px) */
+    /* Medium devices and large (tablets, between 500px and 1439px) */
 
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 500px) and (max-width: 1439px) {
 
-        .Restaurants {
-            padding-left: 80px;
-            padding-right: 80px;
-            padding-bottom: 100px;
-        }
 
         .Fonctionnement {
             padding-left: 60px;
             padding-right: 60px;
+            align-items: center;
+        }
+
+        .Fonctionnement h2 {
+            margin-right: 190px;
         }
 
         .headBar_menu {
@@ -709,6 +717,17 @@ body {
             justify-content: center;
         }
 
+        .Restaurants {
+            align-items: center;
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-bottom: 100px;
+        }
+
+        .Restaurants h2 {
+            margin-right: 210px;
+        }
+
         .Nom_resto {
             padding-right: 0px;
         }
@@ -719,13 +738,10 @@ body {
             padding-bottom: 50px;
         }
 
-        .badge {
-            left: 85%;
+        .btn-list {
+            width: 323px;
         }
 
-        .Heart {
-            left: 90%;
-        }
 
         footer {
             // z-index: 33;
@@ -749,25 +765,17 @@ body {
             width: 80%;
         }
 
-        .menu_button {
-            // width: 100%;
-            width: 634px;
-        }
-
         .menu_entree {
             height: 350px;
         }
 
-        .Heart-menu {
-            left: 70%;
-        }
 
     }
 
     /****** Media queries ***********/
-    /* Large devices (Desktop, between 1024px and 1440px) */
+    /*  Extra Large devices (Desktop, between 1440px and 2160px) */
 
-    @media (min-width: 1025px) and (max-width: 1440px) {
+    @media (min-width: 1440px) and (max-width: 2160px) {
 
 
         // Partie Explorer
@@ -780,25 +788,22 @@ body {
         // Fonctionnement Section
         .Fonctionnement {
             padding: 50px 180px 50px 180px;
+            align-items: center;
         }
 
         .Fonctionnement h2 {
-            margin-left: 0px;
+            margin-right: 950px;
         }
 
-        .Fonctionnement li {
-            width: 335px;
+        .btn-list {
+            width: 322px;
         }
 
         .fonction-list {
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
-            width: 100%;
-            padding-left: 0px;
+            // flex-wrap: wrap;
             gap: 20px;
-
-
         }
 
         .btn-list {
@@ -809,12 +814,8 @@ body {
         // 
         // Restaurants Section
 
-
         .Restaurants {
-            padding-left: 180px;
-            padding-right: 180px;
-            padding-bottom: 40px;
-
+            align-items: center;
         }
 
         .Restaurants-cards {
@@ -823,6 +824,7 @@ body {
             justify-content: space-between;
             gap: 50px;
             padding-bottom: 50px;
+            max-width: 1100px;
 
         }
 
@@ -839,6 +841,7 @@ body {
 
         .Restaurants h2 {
             margin-bottom: 25px;
+            margin-right: 970px;
         }
 
         .Heart {
@@ -938,9 +941,7 @@ body {
             max-width: 634px;
         }
 
-        .Heart-menu {
-            left: 63%;
-        }
+
 
     }
 
