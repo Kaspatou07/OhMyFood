@@ -54,6 +54,8 @@ body {
     width: 100%;
     box-sizing: border-box;
 
+
+
     .localisation-bar {
         background-color: #EAEAEA;
         display: flex;
@@ -202,6 +204,7 @@ body {
 
     }
 
+    // Boutons FOnctionnenment
     .btn-list {
         background-color: #f6f6f6;
         display: flex;
@@ -230,25 +233,6 @@ body {
         color: var(--primary-color);
     }
 
-
-
-    // 
-    // Cartes
-    // 
-    .card {
-        background-color: white;
-        border-radius: 20px;
-        padding: 5px;
-    }
-
-    .card img {
-        object-fit: cover;
-    }
-
-    .card-title {
-        font-size: 18px;
-    }
-
     // 
     // Restaurants
     // 
@@ -259,6 +243,7 @@ body {
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 40px;
+        overflow: hidden;
     }
 
     .Restaurants-cards {
@@ -277,10 +262,24 @@ body {
         height: 251px;
     }
 
+    // 
+    // Cartes
+    // 
     .card {
+        background-color: white;
+        border-radius: 20px;
+        padding: 5px;
         max-width: 340px;
         padding: 0px;
         height: 251px;
+    }
+
+    .card img {
+        object-fit: cover;
+    }
+
+    .card-title {
+        font-size: 18px;
     }
 
     .Restaurants-cards img {
@@ -319,10 +318,7 @@ body {
         margin-left: 15px;
     }
 
-    //Pour les cartes sans le badge "nouveau" sur la page d'acceuil
-    .sans-Badge {
-        margin-top: 15px;
-    }
+
 
     // 
     // Le coeur
@@ -376,6 +372,11 @@ body {
         padding: 5px;
         overflow: hidden;
 
+    }
+
+    //Pour les cartes sans le badge "nouveau" sur la page d'acceuil
+    .sans-Badge {
+        margin-top: 15px;
     }
 
     // Le Footer
@@ -603,7 +604,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 1;
+        // opacity: 1;
         animation: loaderFadeOut 3s ease-in-out 1s forwards; // temps pour la disparition du loader
     }
 
@@ -697,8 +698,6 @@ body {
 
 
         .Fonctionnement {
-            padding-left: 60px;
-            padding-right: 60px;
             align-items: center;
         }
 
@@ -719,9 +718,8 @@ body {
 
         .Restaurants {
             align-items: center;
-            padding-left: 80px;
-            padding-right: 80px;
-            padding-bottom: 100px;
+            padding-bottom: 50px;
+            overflow: hidden;
         }
 
         .Restaurants h2 {
@@ -743,7 +741,7 @@ body {
         }
 
 
-        footer {
+        .footer-pos-menu {
             // z-index: 33;
             position: relative;
             height: 114px;
@@ -752,7 +750,7 @@ body {
 
         .Bigfoot {
             text-align: center;
-            padding-bottom: 55px;
+            // padding-bottom: 55px;
         }
 
         .Littlefoot {
@@ -816,6 +814,7 @@ body {
 
         .Restaurants {
             align-items: center;
+            overflow: hidden;
         }
 
         .Restaurants-cards {
@@ -823,7 +822,7 @@ body {
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 50px;
-            padding-bottom: 50px;
+            padding-bottom: 20px;
             max-width: 1100px;
 
         }
@@ -856,7 +855,7 @@ body {
         // 
         // Le Footer
 
-        footer {
+        .footer-pos-menu {
             // z-index: 33;
             position: relative;
             height: 114px;
@@ -867,7 +866,7 @@ body {
             height: 114px;
             display: flex;
             flex-direction: row-reverse;
-            padding-bottom: 55px;
+            // padding-bottom: 55px;
         }
 
         .Bigfoot h3 {
@@ -941,9 +940,5 @@ body {
             max-width: 634px;
         }
 
-
-
     }
-
-
 }
