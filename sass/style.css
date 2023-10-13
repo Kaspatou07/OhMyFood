@@ -229,7 +229,7 @@ body {
   background-color: white;
   border-radius: 20px;
   padding: 5px;
-  max-width: 340px;
+  max-width: 490px;
   padding: 0px;
   height: 251px;
 }
@@ -542,9 +542,6 @@ body {
   .main-container .Fonctionnement {
     align-items: center;
   }
-  .main-container .Fonctionnement h2 {
-    margin-right: 190px;
-  }
   .main-container .headBar_menu {
     justify-content: center;
     padding-left: 0px;
@@ -559,8 +556,9 @@ body {
     padding-bottom: 50px;
     overflow: hidden;
   }
-  .main-container .Restaurants h2 {
-    margin-right: 210px;
+  .main-container .Restaurants .card {
+    max-width: 490px;
+    width: 490px;
   }
   .main-container .Nom_resto {
     padding-right: 0px;
@@ -681,6 +679,7 @@ body {
     align-items: center;
     padding-bottom: 35px;
     z-index: 9;
+    overflow: hidden;
   }
   .main-container .Bcolor {
     background-color: white;
