@@ -473,6 +473,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
   animation: loaderFadeOut 3s ease-in-out 1s forwards;
 }
 .main-container .loader::after {
