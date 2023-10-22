@@ -73,14 +73,17 @@ body {
 
     .localisation-bar input {
         border-width: 0px;
+        background-color: #EAEAEA;
     }
 
     input::placeholder {
-        background-color: #EAEAEA;
+
         font-size: 16px;
         color: #353535;
         text-align: center;
+
     }
+
 
     /* Firefox compatibilité */
 

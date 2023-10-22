@@ -76,15 +76,14 @@ body {
 }
 .main-container .localisation-bar input {
   border-width: 0px;
+  background-color: #EAEAEA;
 }
 .main-container input::-moz-placeholder {
-  background-color: #EAEAEA;
   font-size: 16px;
   color: #353535;
   text-align: center;
 }
 .main-container input::placeholder {
-  background-color: #EAEAEA;
   font-size: 16px;
   color: #353535;
   text-align: center;
